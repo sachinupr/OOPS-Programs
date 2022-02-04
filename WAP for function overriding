@@ -1,0 +1,28 @@
+
+// WAP for  function overriding / runtime polymorphism.
+#include<bits/stdc++.h>
+using namespace std;
+class hero
+{
+   public:
+   virtual void show()     // Use of virtual function is necessary.
+   {
+       cout<<"This is base class";
+   }
+};
+class derieved : public hero
+{
+    public:
+    void show()
+    {
+        cout<<"Derieved Class";
+    }
+};
+int main()
+{
+    hero * ptr;
+    derieved obj;
+    ptr=&obj;
+    ptr->show();
+    return 0;
+}
