@@ -1,0 +1,23 @@
+
+// WAP for Friend Function.
+#include<bits/stdc++.h>
+using namespace std;
+class hero
+{
+    int a;
+    public:
+    hero():a(40){}
+    friend int fun(hero);
+};
+
+int fun(hero obj)       // Accessing private data members using friend function.
+{
+    return obj.a;
+}
+
+int main()
+{
+    hero obj;
+    cout<<"value is : "<<fun(obj);
+    return 0;
+}     
