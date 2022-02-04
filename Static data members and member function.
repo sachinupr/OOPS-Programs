@@ -1,0 +1,26 @@
+// WAP for static data members and static member function.
+
+#include<bits/stdc++.h>
+using namespace std;
+class hero
+{
+    int a;
+    static int b;
+    public:
+    hero(int x,int y)
+    {
+        a=x;
+        b=y;
+    }
+    static void fun()
+    {
+        cout<<"Only static data members are accesible"<<" "<<b;
+    }
+};
+   int hero::b=0;  // always initialized with 0.
+int main()
+{
+    hero obj(18,25);
+    hero::fun();      // calling a static member function.
+    return 0;
+}
