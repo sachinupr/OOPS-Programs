@@ -1,0 +1,30 @@
+//WAP for copy constructor.
+#include<bits/stdc++.h>
+using namespace std;
+class hero
+{
+    int a,b;
+    public:
+    hero(int x, int y)   // Paramaterized Constructor.
+    {
+        a=x;
+        b=y;
+    }
+    hero(hero & ref)  // Copy Constructor 
+    {
+        a=ref.a;
+        b=ref.b;
+    }
+    void fun()
+    {
+        cout<<"a is : "<<a<<endl;
+        cout<<"b is : "<<b;
+    }
+};
+int main()
+{
+    hero obj(8,9);
+    hero obj2=obj;   // copying values of obj into obj 2
+    obj2.fun();
+    return 0;
+}
