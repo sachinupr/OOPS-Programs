@@ -1,0 +1,29 @@
+// WAP for  binary operator overloading.
+#include<bits/stdc++.h>
+using namespace std;
+class hero
+{
+    int a;
+    public:
+    hero(int x=0)
+    {
+        a=x;
+    }
+    hero operator +(hero const obj)
+    {
+        hero ref;
+        ref.a=a-obj.a;   // Oveloading line.
+        return ref;
+    }
+    void fun()
+    {
+        cout<<"subtraction using addition is  :"<<a;
+    }
+};
+int main()
+{
+    hero obj(6);
+    hero obj2=obj+10;  // performing subtraction using addition.
+    obj2.fun();
+    return 0;
+}
