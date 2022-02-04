@@ -1,0 +1,58 @@
+// WAP for unary opertor overloading.
+
+#include<bits/stdc++.h>
+using namespace std;
+class hero
+{
+    int a;
+    public:
+    hero(int x=0)
+    {
+        a=x;
+    }
+    void operator ++()  // pre increment 
+    {
+        a=++a;
+    }
+    void fun()
+    {
+        cout<<"Value of a is: "<<a;
+    }
+};
+int main()
+{
+    hero obj(8);
+    ++obj;
+    obj.fun();
+    return 0;
+}
+
+// WAP for post increment.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+class hero
+{
+    int a;
+    public:
+    hero(int x=0)
+    {
+        a=x;
+    }
+    void operator ++(int)  // post increment 
+    {
+        a=a++;
+    }
+    void fun()
+    {
+        cout<<"Value of a is: "<<a;
+    }
+};
+int main()
+{
+    hero obj(8);
+    obj++;
+    obj.fun();
+    return 0;
+}
